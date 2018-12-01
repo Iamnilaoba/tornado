@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+    破茧CMS管理系统-修改密码
+{% end %}
+{% block head %}
+    <script src="{{static_url('cms/js/changepwd.js')}}"></script>
+{% end %}
+{% block page_title  %}
+    修改密码
+{% end %}
+{% block content %}
+    <form>
+{#        {% raw xsrf_form_html() %}#}
+        <div class="form-group" style="width: 300px;border-radius: 5px">
+            <label class="sr-only" for="oldpwd" >旧的密码</label>
+            <input type="text" class="form-control" id="oldpwd" placeholder="请输入你的旧密码">
+        </div>
+        <div class="form-group" style="width: 300px;border-radius: 5px">
+            <label class="sr-only" for="newpwd" >新密码</label>
+            <input type="text" class="form-control" id="newpwd" placeholder="请输入你的新密码">
+        </div>
+        <div class="form-group" style="width: 300px;border-radius: 5px">
+            <label class="sr-only" for="newpwd1" >再次输入</label>
+            <input type="text" class="form-control" id="newpwd1" placeholder="再次输入你的新密码">
+        </div>
+
+        <button type="submit" class="btn btn-default" id="changepwd">重置密码</button>
+    </form>
+{% end %}

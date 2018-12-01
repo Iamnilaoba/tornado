@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title  %}
+    破茧CMS管理系统-用户信息
+{% end %}
+{% block page_title  %}
+   用户信息
+{% end %}
+{% block content %}
+    <table class="table table-bordered">
+        <tbody>
+            <tr class="active" >
+                <td>用户名</td>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr class="success">
+                <td>邮箱</td>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr class="danger">
+                <td>权限</td>
+                <td>*****</td>
+            </tr>
+            <tr class="info">
+                <td>加入时间</td>
+                <td>{{ user.join_time }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+{% end %}

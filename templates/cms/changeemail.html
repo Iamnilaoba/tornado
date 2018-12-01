@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+    破茧CMS管理系统-修改邮箱
+{% end %}
+{% block head %}
+    <script src="{{static_url('cms/js/changeemail.js')}}"></script>
+{% end%}
+{% block page_title  %}
+    修改邮箱
+{% end %}
+{% block content %}
+    <form >
+        <div class="form-group" style="width: 300px;border-radius: 5px">
+            <label class="sr-only" for="newemail" >新的邮箱</label>
+            <input type="text" class="form-control" id="newemail" placeholder="请输入你要更改的邮箱">
+        </div>
+        <button type="submit" class="btn btn-default" id="sendemailcode">发送验证码</button>
+        <div class="form-group" style="width: 300px;border-radius: 5px">
+            <label class="sr-only" for="newemailcode" >发送验证码</label>
+            <input type="text" class="form-control" id="newemailcode" placeholder="请输入验证码">
+        </div>
+        <button type="submit" class="btn btn-default" id="changeemail">更改邮箱</button>
+    </form>
+{% end %}
